@@ -1,6 +1,11 @@
-resource "azurerm_resource_group" "local" {
+resource "azurerm_resource_group" "good" {
   name     = "rg-hashitalks-team-workspace"
   location = "swedencentral"
+}
+
+resource "azurerm_resource_group" "bad" {
+  name     = "rg-hashitalks-team-workspace"
+  location = "eastus"
 }
 
 module "resource-group-module" {
